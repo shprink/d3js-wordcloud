@@ -25,6 +25,10 @@ var vis = svg.append("g").attr("transform", "translate(" + [w >> 1, h >> 1] + ")
 
 update();
 
+window.onresize = function(event) {
+    update();
+};
+
 function draw(data, bounds) {
     var w = window.innerWidth,
         h = window.innerHeight;
@@ -80,5 +84,5 @@ function update() {
     if (tags.length){
         fontSize.domain([+tags[tags.length - 1].value || 1, +tags[0].value]);
     }
-    layout.stop().words(tags).start();    
+    layout.stop().words(tags).start();
 }
