@@ -1,0 +1,21 @@
+{
+  "name": "d3js-wordcloud",
+  "version": "0.0.0",
+  "homepage": "https://github.com/shprink/d3js-wordcloud",
+  "authors": [
+    "Shprink <julien.renaux@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3-cloud": "~1.0.5",
+    "d3": "~3.4.11"
+  }
+}
