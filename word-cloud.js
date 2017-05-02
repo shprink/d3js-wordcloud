@@ -25,9 +25,12 @@ var vis = svg.append("g").attr("transform", "translate(" + [w >> 1, h >> 1] + ")
 
 update();
 
-window.onresize = function(event) {
-    update();
-};
+if(window.attachEvent) {
+    window.attachEvent('onresize', update);
+}
+else if(window.addEventListener) {
+    window.addEventListener('resize', update);
+}
 
 function draw(data, bounds) {
     var w = window.innerWidth,
